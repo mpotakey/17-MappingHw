@@ -29,10 +29,8 @@ var map = L.map("mapid", {
   layers: [baselayer, satmap, wildmap]
 });
 
-// Adding 'baselayer' to map.
 baselayer.addTo(map);
 
-// creating layer for tectonic plates and earthquakes
 var plates = new L.LayerGroup();
 var quakes = new L.LayerGroup();
 
@@ -70,7 +68,6 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     };
   }
 
-  // Determines the color of the marker based on the magnitude of the earthquake.
   function getColor(magnitude) {
     switch (true) {
     case magnitude > 5:
@@ -82,7 +79,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     case magnitude > 2:
       return "#FFFF00	";
     case magnitude > 1:
-      return "##0000FF";
+      return "#0000FF";
     default:
       return "#98ee00";
     }
@@ -120,12 +117,12 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
     var grades = [0, 1, 2, 3, 4, 5];
     var colors = [
-      "#98ee00",
-      "#d4ee00",
-      "#eecc00",
-      "#ee9c00",
-      "#ea822c",
-      "#ea2c2c"
+      "#FF0000",
+      "#00FF00",
+      "#FFFF00",
+      "#FFFF00",
+      "#0000FF",
+      "#98ee00"
     ];
 
     for (var i = 0; i < grades.length; i++) {
