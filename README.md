@@ -1,4 +1,4 @@
 # 17-MappingHw
 # Created a Map using JavaScript
-- D3, API,
+- D3, API, HTML, CSS
  
